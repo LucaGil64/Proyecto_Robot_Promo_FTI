@@ -71,7 +71,14 @@ Siguiendo las pautas del trabajo práctico, `pipeline.py` ejecuta primero el an�
 ## 3. Estructura del proyecto y qué hace cada archivo
 
 ```text
-robot_recolector/
+Proyecto_Robot_Promo_FTI/
+├── casos_prueba/
+│   ├── solucion_grupo06.txt        # Programa completo del Grupo 6 (56 tokens)
+│   ├── error_ap_regreso.txt       # Caso externo de rechazo del AP
+│   └── error_fisico_obstaculo.txt # Caso externo de error físico (obstáculo)
+├── registros/
+│   ├── registro_grupo06.csv       # Traza completa paso a paso (CSV)
+│   └── registro_grupo06.txt       # Grillas, métricas y tabla completa (TXT)
 ├── config.py        # Constantes del lenguaje, mapeo de símbolos e instancia Grupo 06
 ├── lexico.py        # Analizador léxico y clase Token
 ├── automata_ap.py   # Autómata a Pila Determinista (DPDA) en automata-lib
@@ -82,7 +89,6 @@ robot_recolector/
 ├── main.py          # Punto de entrada por línea de comandos (CLI)
 └── README.md        # Documentación del proyecto
 ```
-
 ### Detalle de cada módulo
 
 1. **`config.py`**
@@ -157,13 +163,13 @@ python main.py
 ```
 **Qué hace:**
 * Ejecuta las **11 pruebas** (solución correcta + errores del AP + errores físicos + objetivo no alcanzado + casos de borde) mostrando `[PASS]` o `[FAIL]` para cada una.
-* Genera automáticamente en la carpeta actual:
+* Genera automáticamente en la carpeta registros/:
   * `registro_grupo06.csv` (traza completa token por token en CSV).
   * `registro_grupo06.txt` (grillas inicial y final, métricas de la solución y tabla completa).
 
 ### Modo 2: Probar otro archivo de órdenes (sin editar el reconocedor)
 ```bash
-python main.py ruta/a/mi_programa.txt
+python main.py casos_prueba/solucion_grupo06.txt
 ```
 * Evalúa el archivo `.txt` usando la instancia del Grupo 06, imprime la categoría de resultado (`Error léxico`, `Rechazo del AP`, `Error físico`, `Objetivo no alcanzado` o `Misión resuelta`) y, si supera la fase del AP, guarda `registro_salida.csv` y `registro_salida.txt`.
 

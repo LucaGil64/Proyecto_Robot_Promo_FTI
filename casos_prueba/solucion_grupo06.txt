@@ -1,0 +1,9 @@
+arriba
+viaje arriba arriba arriba arriba agarrar abajo abajo abajo abajo soltar finviaje
+arriba
+viaje derecha derecha arriba arriba agarrar abajo abajo izquierda izquierda soltar finviaje
+derecha derecha derecha derecha
+viaje arriba arriba arriba agarrar abajo abajo abajo soltar finviaje
+abajo
+viaje derecha arriba arriba agarrar abajo abajo izquierda soltar finviaje
+abajo izquierda izquierda izquierda izquierda

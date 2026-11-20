@@ -35,7 +35,7 @@ SOLUCION_GRUPO_06 = """
 arriba
 viaje arriba arriba arriba arriba agarrar abajo abajo abajo abajo soltar finviaje
 arriba
-viaje arriba derecha derecha arriba agarrar abajo izquierda izquierda abajo soltar finviaje
+viaje derecha derecha arriba arriba agarrar abajo abajo izquierda izquierda soltar finviaje
 derecha derecha derecha derecha
 viaje arriba arriba arriba agarrar abajo abajo abajo soltar finviaje
 abajo
