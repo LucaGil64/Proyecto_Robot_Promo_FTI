@@ -1,9 +1,13 @@
 import csv
+import os
 from typing import Dict, List
 
 
 def guardar_registro_csv(registro: List[Dict], ruta: str) -> None:
     campos = ["indice", "orden", "estado_ap", "pila", "posicion", "carga"]
+    carpeta = os.path.dirname(ruta)
+    if carpeta:
+        os.makedirs(carpeta, exist_ok=True)
     with open(ruta, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=campos)
         writer.writeheader()
@@ -11,6 +15,9 @@ def guardar_registro_csv(registro: List[Dict], ruta: str) -> None:
 
 
 def guardar_registro_txt(res: Dict, ruta: str) -> None:
+    carpeta = os.path.dirname(ruta)
+    if carpeta:
+        os.makedirs(carpeta, exist_ok=True)
     with open(ruta, "w", encoding="utf-8") as f:
         f.write(f"Resultado: {res['categoria']}\n")
         f.write(f"Detalle: {res['detalle']}\n\n")
