@@ -29,9 +29,9 @@ def main() -> None:
     print(f"Resultado: {res['categoria']}")
     print(f"Detalle:   {res['detalle']}")
     if res["registro"]:
-        guardar_registro_csv(res["registro"], "registro_salida.csv")
-        guardar_registro_txt(res, "registro_salida.txt")
-        print("Registro guardado en registro_salida.csv y registro_salida.txt")
+        guardar_registro_csv(res["registro"], "registros/registro_salida.csv")
+        guardar_registro_txt(res, "registros/registro_salida.txt")
+        print("Registro guardado en registros/registro_salida.csv y registros/registro_salida.txt")
 
 
 if __name__ == "__main__":

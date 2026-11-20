@@ -6,17 +6,17 @@ from pipeline import ejecutar_programa
 
 def ejecutar_pruebas(instancia: Dict) -> None:
     pruebas = [
-        ("1. Solución completa correcta (Grupo 06)", SOLUCION_GRUPO_06, "Misión resuelta"),
-        ("2. Regreso con orden no inverso", "viaje arriba derecha agarrar abajo abajo soltar finviaje", "Rechazo del AP"),
-        ("3. soltar antes de terminar el regreso", "viaje arriba derecha agarrar izquierda soltar abajo finviaje", "Rechazo del AP"),
-        ("4. Viaje sin cierre finviaje", "viaje arriba agarrar abajo soltar", "Rechazo del AP"),
-        ("5. Segundo agarrar en el mismo viaje", "viaje arriba agarrar agarrar abajo soltar finviaje", "Rechazo del AP"),
-        ("6. Programa válido en AP que atraviesa obstáculo (5,3)", "derecha derecha arriba viaje arriba agarrar abajo soltar finviaje", "Error físico"),
-        ("7. Programa válido en AP que agarra en celda vacía (6,1)", "viaje agarrar soltar finviaje", "Error físico"),
-        ("8. Programa válido ejecutable que no alcanza la meta", "arriba viaje arriba arriba arriba arriba agarrar abajo abajo abajo abajo soltar finviaje abajo", "Objetivo no alcanzado"),
-        ("9. Borde: Token desconocido", "arriba diagonal viaje agarrar soltar finviaje", "Error léxico"),
-        ("10. Borde: Entrada vacía", "", "Rechazo del AP"),
-        ("11. Borde: Salida de la grilla", "izquierda viaje arriba agarrar abajo soltar finviaje", "Error físico"),
+        ("1. Válido: Programa completo del grupo", SOLUCION_GRUPO_06, "Misión resuelta"),
+        ("2. Error Léxico: Palabra no permitida", "arriba saltar viaje", "Error léxico"),
+        ("3. Rechazo AP: Camino de regreso no inverso", "arriba viaje arriba agarrar arriba soltar finviaje", "Rechazo del AP"),
+        ("4. Rechazo AP: Soltar antes de vaciar pila", "arriba viaje arriba arriba agarrar abajo soltar finviaje", "Rechazo del AP"),
+        ("5. Rechazo AP: Segundo agarrar en el mismo viaje", "arriba viaje arriba agarrar agarrar abajo soltar finviaje", "Rechazo del AP"),
+        ("6. Rechazo AP: Falta finviaje al cerrar viaje", "arriba viaje arriba agarrar abajo soltar", "Rechazo del AP"),
+        ("7. Error Físico: Intentar agarrar en celda vacía", "arriba viaje arriba agarrar abajo soltar finviaje", "Error físico"),
+        ("8. Error Físico: Choque contra obstáculo (5,3)", "arriba derecha derecha viaje arriba agarrar abajo soltar finviaje", "Error físico"),
+        ("9. Error Físico: Salida de los límites de la grilla", "izquierda viaje agarrar soltar finviaje", "Error físico"),
+        ("10. Incompleto: Programa válido sin completar cajas", "arriba viaje arriba arriba arriba arriba agarrar abajo abajo abajo abajo soltar finviaje", "Objetivo no alcanzado"),
+        ("11. Borde: Entrada vacía", "", "Rechazo del AP"),
     ]
 
     print("=== BATERÍA DE PRUEBAS MÍNIMAS Y CASOS DE BORDE (automata-lib DPDA) ===")
