@@ -155,7 +155,7 @@ python -c "from automata.pda.dpda import DPDA; print('Todo OK!')"
 
 ## 5. Instrucciones para reproducir la ejecución
 
-Ubicarse en la terminal dentro de la carpeta `robot_recolector/` con el entorno `robot-ap` activo:
+Ubicarse en la terminal dentro de la carpeta `Proyecto_Robot_Promo_FTI/` con el entorno `robot-ap` activo:
 
 ### Modo 1: Ejecutar pruebas y generar los registros del Grupo 06
 ```bash
@@ -171,7 +171,7 @@ python main.py
 ```bash
 python main.py casos_prueba/solucion_grupo06.txt
 ```
-* Evalúa el archivo `.txt` usando la instancia del Grupo 06, imprime la categoría de resultado (`Error léxico`, `Rechazo del AP`, `Error físico`, `Objetivo no alcanzado` o `Misión resuelta`) y, si supera la fase del AP, guarda `registro_salida.csv` y `registro_salida.txt`.
+* Evalúa el archivo `.txt` usando la instancia del Grupo 06, imprime la categoría de resultado (`Error léxico`, `Rechazo del AP`, `Error físico`, `Objetivo no alcanzado` o `Misión resuelta`) y, si supera la fase del AP, guarda `registros/registro_salida.csv` y `registros/registro_salida.txt`.
 
 ### Modo 3: Probar otra instancia del depósito en formato JSON
 ```bash
